@@ -1,1 +1,19 @@
 Question 1
+c.1.What are benefits to use Scrum?
+Ans: As its a agile framework, the following are its benefits:-
+->The changes in the requirement from the customer can be accomodated at later point of time easily
+->Their is regular feedback for improvement, as after every sprint there is a customer review given
+->Fast delivery of the features of the product, need not have to wait for the final product to be delivered.
+->There are daily updates in a scrum for tracking the task completion
+->As a complex product is divided into subsets and worked on, it makes the task simplier,easier and accomplishable.
+->When there are several customer reviews after every sprint at diiferent points development, gives a sense of confidence that the product development is going in the right direction.
+
+Question 2
+c.2.According to Cynefin framework, what are five problem domains? Which problem domain(s) is Scrum particularly well suited for?
+Ans: The five problem domains in Cynefin framework are
+            Complex domain
+            Simple domain
+            Complicated domain
+            Disorder domain
+            Chaotic domain
+     The complex problem domain is well suited for scrum as the requirements from the customer aren't fixed and may change in future i.e they are unpredictable. In such a case it is better to use the scrum methology. 
