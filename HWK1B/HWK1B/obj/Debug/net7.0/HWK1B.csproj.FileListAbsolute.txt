@@ -1,0 +1,15 @@
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/bin/Debug/net7.0/HWK1B
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/bin/Debug/net7.0/HWK1B.deps.json
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/bin/Debug/net7.0/HWK1B.runtimeconfig.json
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/bin/Debug/net7.0/HWK1B.dll
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/bin/Debug/net7.0/HWK1B.pdb
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.csproj.AssemblyReference.cache
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.GeneratedMSBuildEditorConfig.editorconfig
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.AssemblyInfoInputs.cache
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.AssemblyInfo.cs
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.csproj.CoreCompileInputs.cache
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.dll
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/refint/HWK1B.dll
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.pdb
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/HWK1B.genruntimeconfig.cache
+/Users/harshitaaanand/ACS_567_HWK/ACS_567_HWK-1/HWK1B/HWK1B/obj/Debug/net7.0/ref/HWK1B.dll
