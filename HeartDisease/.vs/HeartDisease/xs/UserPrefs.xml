@@ -5,10 +5,11 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="HeartDisease/Controllers/HeartDiseaseAnalysisRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HeartDisease/Controllers/HeartDiseaseAnalysisController.cs">
     <Files>
-      <File FileName="HeartDisease/Controllers/HeartDiseaseAnalysisController.cs" Line="101" Column="6" />
-      <File FileName="HeartDisease/Controllers/HeartDiseaseAnalysis.cs" Line="1" Column="1" />
+      <File FileName="HeartDisease/Controllers/HeartDiseaseAnalysisController.cs" Line="101" Column="1" />
+      <File FileName="HeartDisease/Controllers/HeartDiseaseAnalysis.cs" Line="2" Column="23" />
+      <File FileName="HeartDisease/Controllers/HeartDiseaseAnalysisRepository.cs" Line="2" Column="23" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +17,7 @@
           <Node name="HeartDisease" expanded="True">
             <Node name="HeartDisease" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="HeartDiseaseAnalysis.cs" selected="True" />
+                <Node name="HeartDiseaseAnalysisRepository.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -24,5 +25,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.HeartDisease PreferredExecutionTarget="/Applications/Google Chrome.app" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.HeartDisease PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
