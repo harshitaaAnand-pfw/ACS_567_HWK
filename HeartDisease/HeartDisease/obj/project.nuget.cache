@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "1lSZGdijvXEF3naYWs4xMtFVk6VUVkQC7iQphGwNNZ3/oDVdGB1XM9zMI+26zfN3sxJFyFgBYQAGFJaCcGRCXQ==",
+  "success": true,
+  "projectFilePath": "/Users/harshitaaanand/Documents/GitHub/ACS_567_HWK/HeartDisease/HeartDisease/HeartDisease.csproj",
+  "expectedPackageFiles": [
+    "/Users/harshitaaanand/.nuget/packages/microsoft.aspnetcore.openapi/7.0.2/microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
+    "/Users/harshitaaanand/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/harshitaaanand/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/harshitaaanand/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/harshitaaanand/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/Users/harshitaaanand/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/Users/harshitaaanand/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
