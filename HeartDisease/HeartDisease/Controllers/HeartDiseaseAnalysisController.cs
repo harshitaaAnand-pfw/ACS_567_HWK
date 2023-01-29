@@ -13,6 +13,10 @@ namespace HeartDisease.Controllers
         {
             _logger = logger;
         }
+        /// <summary>
+        /// get all the data
+        /// </summary>
+        /// <returns> all data</returns>
 
         [HttpGet]
         [ProducesResponseType(200, Type = typeof(List<HeartDiseaseAnalysis>))]
@@ -23,10 +27,11 @@ namespace HeartDisease.Controllers
 
 
         /// <summary>
-        /// 
+        /// get data by id
         /// </summary>
         /// <param name="id"></param>
-        /// <returns></returns>
+        /// <returns>data by id</returns>
+
         [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(HeartDiseaseAnalysis))]
         [ProducesResponseType(404)]
@@ -46,6 +51,11 @@ namespace HeartDisease.Controllers
             }
 
         }
+        /// <summary>
+        /// Add a data
+        /// </summary>
+        /// <param name="heart"></param>
+        /// <returns>new data</returns>
 
         [HttpPost]
         [ProducesResponseType(200)]
@@ -70,6 +80,14 @@ namespace HeartDisease.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Update with respct to id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="heart"></param>
+        /// <returns>updated value</returns>
+
         [HttpPut("{id}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(200)]
@@ -93,6 +111,12 @@ namespace HeartDisease.Controllers
             }
         }
 
+        /// <summary>
+        /// delete by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>deleted</returns>
+
         [HttpDelete("{id}")]
 
         public IActionResult DeleteHeart(int id)
@@ -107,6 +131,19 @@ namespace HeartDisease.Controllers
             {
                 return Ok("Heart deleted");
             }
+        }
+
+        /// <summary>
+        /// analyse the data
+        /// </summary>
+        /// <returns> all data</returns>
+
+        [HttpGet]
+        [ProducesResponseType(200, Type = typeof(string))]
+        [Route("age")]
+        public IActionResult GetHeartDiseaseDataAnalysis(int age)
+        {
+            return Ok(HeartDiseaseAnalysisRepository.getInstance().getHeartsAnalysis(age));
         }
     }
 }

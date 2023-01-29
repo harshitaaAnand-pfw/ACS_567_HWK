@@ -13,6 +13,8 @@ namespace HeartDisease
 
         public int Id { get; set; }
 
+        public int Age { get; set; }
+
         public String Description { get; set; }
 
         public bool IsCompleted { get; set; }
