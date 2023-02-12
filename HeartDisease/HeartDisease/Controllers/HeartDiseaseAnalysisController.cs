@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.AspNetCore.Mvc;
-
+using HeartDisease.Interfaces;
+using HeartDisease.Models;
 namespace HeartDisease.Controllers
 {
     [ApiController]
@@ -8,10 +9,12 @@ namespace HeartDisease.Controllers
     public class HeartDiseaseAnalysisController : ControllerBase
     {
         private readonly ILogger<HeartDiseaseAnalysisController> _logger;
+        private readonly IHeartRepository _heartRepository;
 
-        public HeartDiseaseAnalysisController(ILogger<HeartDiseaseAnalysisController> logger)
+        public HeartDiseaseAnalysisController(ILogger<HeartDiseaseAnalysisController> logger, IHeartRepository heartRepository)
         {
             _logger = logger;
+            _heartRepository = heartRepository;
         }
         /// <summary>
         /// get all the data
@@ -19,10 +22,11 @@ namespace HeartDisease.Controllers
         /// <returns> all data</returns>
 
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(List<HeartDiseaseAnalysis>))]
-        public IActionResult GetHeartDiseaseAnalysis()
+        [ProducesResponseType(200, Type = typeof(List<Heart>))]
+        public IActionResult GetHearts()
         {
-            return Ok(HeartDiseaseAnalysisRepository.getInstance().getHearts());
+            _logger.Log(LogLevel.Information, "Get Heart data analysis");
+            return Ok(_heartRepository.GetHearts());
         }
 
 
@@ -33,12 +37,12 @@ namespace HeartDisease.Controllers
         /// <returns>data by id</returns>
 
         [HttpGet("{id}")]
-        [ProducesResponseType(200, Type = typeof(HeartDiseaseAnalysis))]
+        [ProducesResponseType(200, Type = typeof(Heart))]
         [ProducesResponseType(404)]
 
-        public IActionResult GetHeartDisease(int id)
+        public IActionResult GetHeart(int id)
         {
-            HeartDiseaseAnalysis heart = HeartDiseaseAnalysisRepository.getInstance().GetHeart(id);
+            Heart heart = _heartRepository.GetHeart(id);
 
 
             if (heart == null)
@@ -61,14 +65,14 @@ namespace HeartDisease.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
 
-        public IActionResult CreateAnalysis([FromBody] HeartDiseaseAnalysis heart)
+        public IActionResult CreateAnalysis([FromBody] Heart heart)
         {
             if (heart == null)
             {
                 return BadRequest("Heart is null");
             }
 
-            bool result = HeartDiseaseAnalysisRepository.getInstance().addHeart(heart);
+            bool result = _heartRepository.CreateHeart(heart);
 
             if (result)
             {
@@ -93,13 +97,13 @@ namespace HeartDisease.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
 
-        public IActionResult UpdateHeart(int id, HeartDiseaseAnalysis heart)
+        public IActionResult UpdateHeart(int id, Heart heart)
         {
             if (heart == null)
             {
                 return BadRequest("heart is null");
             }
-            bool isUpdated = HeartDiseaseAnalysisRepository.getInstance().editHeart(id, heart);
+            bool isUpdated = _heartRepository.UpdateHeart(heart);
 
             if (!isUpdated)
             {
@@ -119,9 +123,9 @@ namespace HeartDisease.Controllers
 
         [HttpDelete("{id}")]
 
-        public IActionResult DeleteHeart(int id)
+        public IActionResult DeleteHeart(Heart heart)
         {
-            bool deleted = HeartDiseaseAnalysisRepository.getInstance().deleteHeart(id);
+            bool deleted = _heartRepository.DeleteHeart(heart);
 
             if (!deleted)
             {
@@ -143,7 +147,7 @@ namespace HeartDisease.Controllers
         [Route("age")]
         public IActionResult GetHeartDiseaseDataAnalysis(int age)
         {
-            return Ok(HeartDiseaseAnalysisRepository.getInstance().getHeartsAnalysis(age));
+            return Ok(_heartRepository.GetHeartsAnalysis(age));
         }
     }
 }
