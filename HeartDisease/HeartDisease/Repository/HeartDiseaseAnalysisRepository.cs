@@ -13,12 +13,19 @@ namespace HeartDisease
         {
             _context = context;
         }
-
+        /// <summary>
+        /// get all the data
+        /// </summary>
+        /// <returns>get all data</returns>
         public ICollection<Heart> GetHearts()
         {
             return _context.Heart.ToList();
         }
-
+        /// <summary>
+        /// get the data by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>data by id</returns>
         public Heart GetHeart(int id)
         {
             return _context.Heart.Where(hearts => hearts.Id == id).FirstOrDefault();
@@ -29,152 +36,56 @@ namespace HeartDisease
             return _context.Heart.Any(hearts => hearts.Id == id);
         }
 
+        /// <summary>
+        /// add the data
+        /// </summary>
+        /// <param name="heart"></param>
+        /// <returns>new value</returns>
         public bool CreateHeart(Heart heart)
         {
             _context.Add(heart);
             return Save();
         }
 
+        /// <summary>
+        /// update the data
+        /// </summary>
+        /// <param name="heart"></param>
+        /// <param name="updated"></param>
+        /// <returns>updated value</returns>
         public bool UpdateHeart(Heart heart)
         {
             _context.Update(heart);
             return Save();
         }
 
+        /// <summary>
+        /// delete the data
+        /// </summary>
+        /// <param name="heart"></param>
+        /// <returns>null</returns>
         public bool DeleteHeart(Heart heart)
         {
             _context.Remove(heart);
             return Save();
         }
 
+        /// <summary>
+        /// Save the data in database
+        /// </summary>
+        /// <returns></returns>
         public bool Save()
         {
             int saved = _context.SaveChanges();
             return saved == 1;
         }
-        //old code
-        //private static HeartDiseaseAnalysisRepository instance;
-        //private List<HeartDiseaseAnalysis> hearts;
-
-        //private HeartDiseaseAnalysisRepository()
-        //{
-        //    hearts = new();
-        //    hearts.Add(new HeartDiseaseAnalysis("add data"));
-        //}
-
-        //public static HeartDiseaseAnalysisRepository getInstance()
-        //{
-        //    if (instance == null)
-        //    {
-        //        instance = new();
-        //    }
-        //    return instance;
-        //}
-        ///// <summary>
-        ///// get all the data
-        ///// </summary>
-        ///// <returns>get all data</returns>
-        //public List<HeartDiseaseAnalysis> getHearts()
-        //{
-        //    return hearts;
-        //}
-        ///// <summary>
-        ///// get the data by id
-        ///// </summary>
-        ///// <param name="id"></param>
-        ///// <returns>data by id</returns>
-        //public HeartDiseaseAnalysis GetHeart(int id)
-        //{
-        //    HeartDiseaseAnalysis heart = null;
-
-        //    foreach (HeartDiseaseAnalysis h in hearts)
-        //    {
-        //        if (id == h.Id)
-        //        {
-        //            heart = h;
-        //            break;
-
-        //        }
-        //    }
-        //    return heart;
-        //}
-        ///// <summary>
-        ///// add the data
-        ///// </summary>
-        ///// <param name="heart"></param>
-        ///// <returns>new value</returns>
-        //public bool addHeart(HeartDiseaseAnalysis heart)
-        //{
-        //    bool isAdded = true;
-
-        //    foreach (HeartDiseaseAnalysis h in hearts)
-        //    {
-        //        if (h.Id == heart.Id)
-        //        {
-        //            isAdded = false;
-        //            break;
-        //        }
-        //    }
-        //    if (isAdded)
-        //    {
-        //        hearts.Add(heart);
-        //    }
-        //    return isAdded;
-        //}
-        ///// <summary>
-        ///// update the data
-        ///// </summary>
-        ///// <param name="id"></param>
-        ///// <param name="updated"></param>
-        ///// <returns>updated value</returns>
-        //public bool editHeart(int id, HeartDiseaseAnalysis updated)
-        //{
-        //    bool isEdited = false;
-
-        //    foreach (HeartDiseaseAnalysis h in hearts)
-        //    {
-        //        if (h.Id == id)
-        //        {
-        //            h.Description = updated.Description;
-        //            h.IsCompleted = updated.IsCompleted;
-        //            isEdited = true;
-        //            break;
-
-        //        }
-        //    }
-
-        //    return isEdited;
-        //}
-        ///// <summary>
-        ///// delete the data
-        ///// </summary>
-        ///// <param name="id"></param>
-        ///// <returns>null</returns>
-        //public bool deleteHeart(int id)
-        //{
-        //    HeartDiseaseAnalysis delete = null;
-
-        //    foreach (HeartDiseaseAnalysis h in hearts)
-        //    {
-        //        if (id == h.Id)
-        //        {
-        //            delete = h;
-        //            break;
-        //        }
-        //    }
-
-        //    if (delete != null)
-        //    {
-        //        hearts.Remove(delete);
-        //    }
-
-        //    return delete == null;
-        //}
-
-        ///// <summary>
-        ///// analysis of the data
-        ///// </summary>
-        ///// <returns>analyse all data</returns>
+        
+        
+        
+        /// <summary>
+        /// analysis of the data
+        /// </summary>
+        /// <returns>analyse all data</returns>
         public string GetHeartsAnalysis(int age)
 
         {
