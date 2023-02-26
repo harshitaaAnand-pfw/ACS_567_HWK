@@ -97,22 +97,26 @@ namespace HeartDisease.Controllers
         [ProducesResponseType(200)]
         [ProducesResponseType(404)]
 
-        public IActionResult UpdateHeart(int id, Heart heart)
+        public IActionResult UpdateHeart([FromBody] Heart heart)
         {
             if (heart == null)
             {
                 return BadRequest("heart is null");
             }
-            bool isUpdated = _heartRepository.UpdateHeart(heart);
 
-            if (!isUpdated)
+            Heart dbHeart = _heartRepository.GetHeart(heart.Id);
+
+            if (dbHeart == null)
             {
-                return NotFound("No matching heart");
+                return BadRequest("heart not found");
             }
-            else
-            {
-                return Ok("Successfully updated");
-            }
+
+            dbHeart.Description = heart.Description;
+            dbHeart.IsCompleted = heart.IsCompleted;
+            dbHeart.age = heart.age;
+            bool isUpdated = _heartRepository.UpdateHeart(dbHeart);
+
+            return isUpdated ? Ok() : BadRequest();
         }
 
         /// <summary>
@@ -123,18 +127,11 @@ namespace HeartDisease.Controllers
 
         [HttpDelete("{id}")]
 
-        public IActionResult DeleteHeart(Heart heart)
+        public IActionResult DeleteHeart(int id)
         {
-            bool deleted = _heartRepository.DeleteHeart(heart);
+            bool isDeleted = _heartRepository.DeleteHeart(id);
 
-            if (!deleted)
-            {
-                return NotFound("No matching id");
-            }
-            else
-            {
-                return Ok("Heart deleted");
-            }
+            return isDeleted ? Ok() : BadRequest();
         }
 
         /// <summary>

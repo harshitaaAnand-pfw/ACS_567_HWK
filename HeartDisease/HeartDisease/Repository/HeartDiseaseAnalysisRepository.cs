@@ -62,11 +62,15 @@ namespace HeartDisease
         /// <summary>
         /// delete the data
         /// </summary>
-        /// <param name="heart"></param>
+        /// <param name="id"></param>
         /// <returns>null</returns>
-        public bool DeleteHeart(Heart heart)
+        public bool DeleteHeart(int id)
         {
-            _context.Remove(heart);
+            var items = _context.Heart.Where(item => item.Id == id);
+            foreach (var item in items)
+            {
+                _context.Remove(item);
+            }
             return Save();
         }
 

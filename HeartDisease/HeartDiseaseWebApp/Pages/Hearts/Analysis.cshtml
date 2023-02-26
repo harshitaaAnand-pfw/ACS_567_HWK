@@ -1,0 +1,22 @@
+@* Razor Page for Analysis*@
+@page
+@model HeartDiseaseWebApp.Pages.Hearts.AnalysisModel
+@{
+}
+<br>
+<h2>Heart Analysis</h2>
+
+<form method="GET">
+    <table>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" name="description" value="@Model.heart.Description"</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" value="@Model.heart.age"</td>
+        </tr>
+    </table>
+    <p></p>
+</form>
+

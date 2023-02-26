@@ -1,0 +1,36 @@
+@* Razor Page for Editing*@
+@page
+@model HeartDiseaseWebApp.Pages.Hearts.EditModel
+@{
+}
+
+<br>
+<h2>Edit Heart</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div>@Model.errorMessage</div>
+}
+<form method="POST">
+    <input type="hidden" name="id" value="@Model.heart,Id" />
+    <table>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" name="description" value="@Model.heart.Description"</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" name="age" value="@Model.heart.age"</td>
+        </tr>
+        <tr>
+            <td>Is Completed</td>
+            <td><input type="checkbox" name="isCompleted" @( Model.heart.IsCompleted ? "checked" : "" )></td>
+        </tr>
+    </table>
+    <p></p>
+    @if (Model.successMessage.Length > 0)
+    {
+        <div>@Model.successMessage</div>
+    }
+    <input type="submit" value="Edit" class="btn btn-primary" />
+</form>
